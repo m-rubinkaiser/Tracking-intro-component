@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "barlow-bold-c";
+    src: url(BarlowCondensed-Bold.ttf);
+}
+@font-face {
+    font-family: "barlow";
+    src: url(Barlow-Light.ttf);
+}
+@font-face {
+    font-family: "barlow-bold";
+    src: url(Barlow-SemiBold.ttf);
+}
+@font-face {
+    font-family: "barlow-l";
+    src: url(Barlow-Regular.ttf);
+}
+body {
+    text-transform: uppercase;
+    position: relative;
+}
+:root {
+    --DarkBlue: hsl(230, 29%, 20%);
+    --Dark: hsl(230, 11%, 40%);
+    --Grayish: hsl(231, 7%, 65%);
+    --Light: hsl(207, 33%, 95%);
+    --Red: hsl(0, 100%, 68%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 7vh 10vw;
+    position: relative;
+}
+.nav_button{
+    position: absolute;
+    right: 5vw;
+    top: 2vh;
+    border: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+h1 {
+    font-family: barlow-bold-c;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    color: var(--DarkBlue);
+}
+ol {
+    display: flex;
+    font-family: barlow-bold;
+    gap: 30px;
+}
+li:hover {
+    text-decoration: underline;
+}
+.login {
+    color: var(--Grayish);
+}
+.login-dot {
+    height: 10px;
+    width: 10px;
+    background-color: var(--Grayish);
+    margin: 10px 0 0 10px;
+    border-radius: 50px;
+}
+.logo {
+    height: 30px;
+}
+.subtitles {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 20px 0;
+    cursor: default;
+}
+.subtitle1 {
+    height: 25px;
+    border-radius: 50px;
+    width: 40px;
+    padding: 2px 5px;
+    color: var(--Light);
+    background-color: #000;
+    font-family: barlow-bold;
+    font-size: 14px;
+}
+.subtitle2 {
+    color: var(--Grayish);
+    letter-spacing: 2px;
+    font-family: barlow-l;
+    font-size: 14px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 10vw;
+    overflow: hidden;
+}
+.info {
+    font-family: barlow-bold;
+    font-size: 14px;
+    margin-bottom: 40px;
+    color: var(--Dark);
+}
+.button {
+    display: flex;
+    gap: 20px;
+}
+.content{
+    width: 500px;
+}
+.button > p {
+    font-family: barlow;
+    color: var(--Grayish);
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-size: 12px;
+    cursor: grab;
+}
+img{
+    max-width: none;
+}
+.device {
+    margin-top: 3vw;
+    height: 400px;
+}
+.buttons {
+    border-radius: 5px;
+    border: 0;
+    height: 45px;
+    width: 180px;
+    font-family: barlow-bold;
+    color: var(--Light);
+    background-color: var(--Red);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.background {
+    position: absolute;
+    background-color: var(--Light);
+    height: 440px;
+    width: 50%;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    border-radius: 0 0 0 50px;
+}
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .content{
+        width: 90%;
+        margin-top: 40px;
+    }
+    .container div:nth-of-type(1) {
+        order: 2;
+    }
+    nav {
+        padding: 4vh 10vw;
+    }
+    .info {
+        margin-bottom: 10px;
+    }
+    .device {
+        height: 250px;
+        margin-left: 20%;
+    }
+}
+@media (max-width: 600px) {
+    .device{
+        margin-left: 10%;
+    }
+    nav {
+        padding: 2vh 5vw 8vh 5vw;
+    }
+    #list{
+        display: grid;
+        opacity: 0;
+        transition: 0.8s ease;
+    }
+    #nav_button{
+        visibility: inherit;
+        background-image: url(../images/icon-hamburger.svg);
+        height: 20px;
+        width: 30px;
+        background-repeat: no-repeat;
+    }
+    ol{
+        display: grid;
+        position: absolute;
+        right: 60px;
+        top: 40px;
+        height: 250px;
+        width: 350px;
+        background-color: white;
+        text-align: center;
+        padding: 20px 0 0 0;
+        display: none;
+    }
+    .login-dot{
+        width: 330px;
+        height: 1px;
+    }
+}
