@@ -177,6 +177,9 @@ img{
     nav {
         padding: 2vh 5vw 8vh 5vw;
     }
+    .content{
+        width: 80%;
+    }
     #list{
         display: grid;
         opacity: 0;
