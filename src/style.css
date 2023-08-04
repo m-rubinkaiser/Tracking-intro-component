@@ -33,7 +33,7 @@ nav {
     padding: 7vh 10vw;
     position: relative;
 }
-.nav_button{
+#nav_button{
     position: absolute;
     right: 5vw;
     top: 2vh;
